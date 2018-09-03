@@ -26,6 +26,7 @@ class BookmarksController extends AppController
         $bookmarks = $this->paginate($this->Bookmarks);
 
         $this->set(compact('bookmarks'));
+	$this->set('_serialize', ['bookmarks']);
     }
 
     /**
